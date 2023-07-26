@@ -1,3 +1,5 @@
+import ClientOnly from './components/ClientOnly'
+import RegisterModal from './components/models/RegisterModal'
 import Navbar from './components/navbar/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
@@ -19,7 +21,12 @@ export default function RootLayout({
     <html lang="en">
       <body>
 
+        <ClientOnly>
+         <RegisterModal/>
         <Navbar/>
+        </ClientOnly>
+
+       
         
         {children}</body>
     </html>

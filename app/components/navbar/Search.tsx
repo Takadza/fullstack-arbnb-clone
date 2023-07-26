@@ -1,6 +1,5 @@
 "use client";
-
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { BiSearch } from 'react-icons/bi';
 
 
 function Search() {
@@ -18,7 +17,7 @@ function Search() {
             Add Guest
           </div>
           <div className="p-2 bg-rose-500 rounded-full text-white">
-           <MagnifyingGlassIcon/>
+          <BiSearch size={18} />
           </div>
 
         </div>
