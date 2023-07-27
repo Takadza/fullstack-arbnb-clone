@@ -3,6 +3,7 @@ import RegisterModal from './components/models/RegisterModal'
 import Navbar from './components/navbar/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
+import ToasterProvider from './providers/ToasterProviders'
 
 
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body>
 
         <ClientOnly>
+          <ToasterProvider/>
          <RegisterModal/>
         <Navbar/>
         </ClientOnly>
