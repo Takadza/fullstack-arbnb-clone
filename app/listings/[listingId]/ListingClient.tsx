@@ -38,7 +38,16 @@ const ListingClient: React.FC<ListingClientProps> = ({
         currentUser={currentUser }
         />
         <div className="grid grid-cols-1 md:grid-cols-7 md:gap-10 mt-6  ">
-            <ListingInfo/>
+            <ListingInfo
+            user={listing.user}
+            roomCount={listing.roomCount}
+            description={listing.description}
+            guestCount={listing.guestCount}
+            bathroomCount={listing.bathroomCount}
+            locationValue={listing.locationValue}
+            category={category}
+            
+            />
 
         </div>
         </div>
