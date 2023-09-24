@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { Reservation } from "@prisma/client";
-import { SafeListing, SafeUser} from "@/app/types"
+import { SafeListing, SafeReservations, SafeUser} from "@/app/types"
 import { useMemo } from "react";
 import { categories } from "@/app/components/navbar/Categories";
 import Container from "@/app/components/Container";
@@ -24,7 +24,7 @@ const initalDateRange = {
 }
 
 interface ListingClientProps{
-    reservations?: Reservation[];
+    reservations?: SafeReservations[];
     listing: SafeListing & {
         user: SafeUser
     };
@@ -66,7 +66,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
 
     setIsLoading(true)
 
-    axios.post("/api/reservations",{
+    axios.post('/api/reservations', {
         totalPrice,
         startDate: dateRange.startDate,
         endDate: dateRange.endDate,
